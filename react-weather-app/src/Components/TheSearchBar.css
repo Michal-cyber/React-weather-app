@@ -1,0 +1,28 @@
+.search {
+    width: 100%;
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2.95em;
+    padding-right: 0.75em;
+    color: #333;
+    font-size: .9em;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5em;
+    background: white;
+    box-sizing: border-box;
+    outline: none;
+    appearance: none;
+    background-image: url('../assets/search.svg');
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 1em;
+    background-color: white;
+    background-size: 1em;
+}
+@media screen and (max-width: 520px) {
+    .search {
+        font-size: 0.85em;
+   }
+}
