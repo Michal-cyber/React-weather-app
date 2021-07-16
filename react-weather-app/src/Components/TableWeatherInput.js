@@ -21,6 +21,7 @@ const TableWeatherInput = (props) => {
     
   return (
       <div>
+	  {onInput.message && ( <h2> {onInput.message} - Please enter valid city! </h2>) }
            { typeof onInput.main !== 'undefined' ? (
                <div className="weather-input"> 
                     <table>
