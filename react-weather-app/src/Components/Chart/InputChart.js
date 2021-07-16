@@ -13,12 +13,14 @@ class LineChart extends Component {
   };
 
 	render() {
+		const { chartData } = this.props;
+		const { main } = chartData;
 		const options = {
 			animationEnabled: true,
 			exportEnabled: true,
 			theme: "dark2", // "light1", "dark1", "dark2"
 			title:{
-				text: `Temperature in ${this.props.chartData.name}`
+				text: `Temperature in ${chartData.name}`
 			},
 			axisY: {
 				title: "Temperature",
@@ -35,9 +37,9 @@ class LineChart extends Component {
 				type: "line",
 				toolTipContent: "Temperature {x}: {y}°C",
 				dataPoints: [
-          { y: this.Celsius(this.props.chartData.main.temp_min) , indexLabel: "THE LOWEST",markerColor: "White", markerType: "cross", x: 1 },
-          { y: this.Celsius(this.props.chartData.main.temp), indexLabel: "ACTUAL", x: 2},
-          { y: this.Celsius(this.props.chartData.main.temp_max), indexLabel: "THE HIGHEST", markerColor: "red", x:3},
+          { y: this.Celsius(main.temp_min) , indexLabel: "THE LOWEST",markerColor: "White", markerType: "cross", x: 1 },
+          { y: this.Celsius(main.temp), indexLabel: "ACTUAL", x: 2},
+          { y: this.Celsius(main.temp_max), indexLabel: "THE HIGHEST", markerColor: "red", x:3},
 				
 				]
 			}]
